@@ -1,5 +1,4 @@
 # cython: language_level=3
-# Still being worked on right now
 from libcpp.string cimport string
 
 cdef extern from "../src/cpp/engine.hpp" namespace "":
