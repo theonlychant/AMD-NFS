@@ -12,3 +12,9 @@ if(USE_HIP AND HIPCC)
     COMPILE_FLAGS "-x hip"
   )
 endif()
+
+add_executable(test_slab test_slab.c)
+target_link_libraries(test_slab PRIVATE amdinfer_c)
+
+add_executable(demo_alloc demo_alloc.c)
+target_link_libraries(demo_alloc PRIVATE amdinfer_c)
