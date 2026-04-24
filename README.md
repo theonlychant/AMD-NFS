@@ -18,6 +18,5 @@ cd cmd/server && go build -v ./...
 ```
 
 Notes:
-- The C++ engine is a stub with minimal impl, not a working inference engine.
 - This is an initial scaffold. Implementations are prototypes and stubs.
 - For HIP/ROCm builds, ensure `hipcc` is in PATH and set `-DUSE_HIP=ON`.
