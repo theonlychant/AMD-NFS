@@ -29,6 +29,7 @@ jobs:
         run: |
           cd cmd/server
           # Build server binary
-          go build -o amdinfer_server -v main.go
+          go build -o amdinfer_server -v ./main.go
           # Build CLI control binary
-          go build -o amdinfer_ctl -v built.go
+          go build -o amdinfer_ctl -v ./built.go
+
