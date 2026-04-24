@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <cstdint>
+#include <memory>
 
 struct ModelConfig {
     int32_t n_layers   = 32;
