@@ -25,7 +25,10 @@ jobs:
         run: |
           cmake -S . -B build -DUSE_HIP=OFF -Wno-dev
           cmake --build build -j2
-      - name: Build Go server
+      - name: Build Go server and CLI separately
         run: |
           cd cmd/server
-          go build -v ./...
+          # Build server binary
+          go build -o amdinfer_server -v main.go
+          # Build CLI control binary
+          go build -o amdinfer_ctl -v built.go
