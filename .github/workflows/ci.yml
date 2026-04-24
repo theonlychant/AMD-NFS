@@ -30,6 +30,5 @@ jobs:
           cd cmd/server
           # Build server binary
           go build -o amdinfer_server -v ./main.go
-          # Build CLI control binary
-          go build -o amdinfer_ctl -v ./built.go
-
+          # Build CLI control binary (path reflects new location)
+          go build -o amdinfer_ctl -v ./cmd/ctl/built.go
