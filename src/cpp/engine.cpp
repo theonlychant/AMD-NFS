@@ -2,9 +2,15 @@
 #include <iostream>
 
 struct InferenceEngine::Impl {
+    ModelConfig  cfg;
+    Model        model{cfg};
+    Tokenizer    tokenizer{""};
+    Sampler      sampler{};
+    KVCache      kv_cache{cfg.n_layers, cfg.n_kv_heads, cfg.dim / cfg.n_heads, cfg.max_seq};
+};
+  
   // pointer to C allocator/hip kernels would live here
   Impl(){}
-};
 
 InferenceEngine::InferenceEngine(): impl(new Impl()){}
 InferenceEngine::~InferenceEngine() = default;
