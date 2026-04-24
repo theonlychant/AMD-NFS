@@ -9,7 +9,7 @@ struct InferenceEngine::Impl {
     KVCache      kv_cache{cfg.n_layers, cfg.n_kv_heads, cfg.dim / cfg.n_heads, cfg.max_seq};
 };
   
-  // pointer to C allocator/hip kernels would live here
+  // might add new pointers
   Impl(){}
 
 InferenceEngine::InferenceEngine(): impl(new Impl()){}
