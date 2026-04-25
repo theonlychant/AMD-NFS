@@ -32,3 +32,8 @@ jobs:
           go build -o amdinfer_server -v ./main.go
           # Build CLI control binary (path reflects new location)
           go build -o amdinfer_ctl -v ./cmd/ctl/built.go
+      - name: Install Python package and run tests
+        run: |
+          python -m pip install -e py
+          python -m pip install pytest
+          pytest -q py/tests
