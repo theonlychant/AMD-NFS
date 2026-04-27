@@ -22,7 +22,15 @@ ext = Extension(
 
 setup(
     name="amdinfer_py",
-    packages=["amdinfer_py"],
+    packages=["amdinfer_py", "amdinfer_ml"],
     ext_modules=cythonize([ext], compiler_directives={"language_level": "3"}),
+    entry_points={
+        "console_scripts": [
+            "amdinfer-cli=amdinfer_ml.cli:main",
+        ]
+    },
+    extras_require={
+        "ml": ["torch", "tokenizers", "numpy"],
+    },
 )
 # Author: theonlychant
