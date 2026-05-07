@@ -1,0 +1,11 @@
+# Build artifacts
+build/
+py/build/
+py/builds/
+
+# Compiled binaries
+cmd/server/amdinfer_server
+py/amdinfer_py/*.so
+*.so
+*.o
+*.a

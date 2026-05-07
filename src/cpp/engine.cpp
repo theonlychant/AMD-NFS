@@ -1,9 +1,10 @@
 #include "engine.hpp"
 #include <iostream>
+#include "booster.hpp"
 
 struct InferenceEngine::Impl {
   // Minimal implementation details for the stub engine
-  Impl(){}
+  Impl(){ booster::init(); }
 };
 
 InferenceEngine::InferenceEngine(): impl(new Impl()){}
@@ -16,5 +17,7 @@ bool InferenceEngine::load_model(const std::string &path){
 
 std::string InferenceEngine::generate(const std::string &prompt, int max_tokens){
   (void)max_tokens;
-  return std::string("[stub response] ")+prompt;
+  // Use booster when available to form a boosted response
+  std::string boosted = booster::generate_boosted(prompt);
+  return boosted;
 }

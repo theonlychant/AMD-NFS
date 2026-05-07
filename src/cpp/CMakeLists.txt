@@ -4,6 +4,7 @@ add_library(amdinfer_cpp STATIC
   model.cpp
   sampler.cpp
   tokenizer.cpp
+  booster.cpp
 )
 
 target_include_directories(amdinfer_cpp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
