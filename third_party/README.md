@@ -4,9 +4,9 @@ Placeholders and integration notes for high-performance kernels.
 
 Suggested contents:
 
-- `flash_attention/` — prebuilt FlashAttention kernels (if available for ROCm)
-- `paged_attention/` — prebuilt PagedAttention implementations
-- `rocblas/` — optional wrappers or prebuilt rocBLAS binaries
+- `flash_attention/` - prebuilt FlashAttention kernels (if available for ROCm)
+- `paged_attention/` - prebuilt PagedAttention implementations
+- `rocblas/` - optional wrappers or prebuilt rocBLAS binaries
 
 Integration approach:
 
